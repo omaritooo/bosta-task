@@ -1,0 +1,71 @@
+@import "@/assets/styles/mixins.scss";
+@import "@/assets/styles/variables.scss";
+:root {
+  --circle-size: clamp(1rem, 5vw, 1.75rem);
+  --spacing: clamp(0.05rem, 4vw, 0.1rem);
+}
+
+.stepper__item {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+
+  &:before {
+    content: "";
+    flex: 0 0 var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    background-color: lightgrey;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    @include rtl() {
+      rtl: 0;
+      transform: translateX(calc(var(--circle-size) / -2));
+    }
+    @include ltr() {
+      left: 0;
+      transform: translateX(calc(var(--circle-size) / 2));
+    }
+    top: calc(var(--circle-size) + var(--spacing));
+    bottom: var(--spacing);
+    z-index: -1;
+    width: 2px;
+    background-color: #e0e0e0;
+  }
+}
+
+.stepper__title {
+  font-weight: bold;
+  font-size: clamp(1rem, 4vw, 1.25rem);
+  margin-bottom: 0.75rem;
+}
+
+.stepper__desc {
+  color: grey;
+  display: flex;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1.75rem;
+  border: 1px solid $color-secondary;
+  border-radius: 0.75rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: clamp(0.85rem, 2vmax, 1rem);
+}
+
+.stepper__content {
+  max-width: 700px;
+}
+
+/*** Non-demo CSS ***/
+
+.wrapper {
+  @include container();
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}

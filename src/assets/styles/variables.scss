@@ -1,0 +1,43 @@
+$color-danger: #f40005;
+$color-success: #35b600;
+$color-warning: #f9ba02;
+$color-primary: #404a65;
+$color-offwhite: #fafafa;
+$color-secondary: #9da7bc;
+$color-progress: #0098a5;
+$color-black: #111619;
+
+$ltr: "[dir=ltr]";
+$rtl: "[dir=rtl]";
+
+$font-family: "Cairo";
+
+$xs: 425px;
+$sm: 768px;
+$md: 1200px;
+$lg: 1920px;
+$xl: 2048px;
+$xxl: 2560px;
+
+$container: 15px;
+$container_sm: 15px;
+$container_md: 30px;
+$container_lg: 150px;
+$container_xl: 200px;
+
+$desktop-breakpoints: (
+  "xl": $xl,
+  "lg": $lg,
+  "md": $md,
+  "sm": $sm,
+  "xs": $xs,
+);
+
+:export {
+  xs: $xs;
+  sm: $sm;
+  md: $md;
+  lg: $lg;
+  xl: $xl;
+  xxl: $xxl;
+}

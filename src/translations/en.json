@@ -1,0 +1,31 @@
+{
+  "header": {
+    "home": "Home",
+    "prices": "Prices",
+    "sales": "Contact Sales",
+    "track": "Track your shipment",
+    "login": "Login"
+  },
+  "shipment": {
+    "number": "Shipment No."
+  },
+  "state": {
+    "ticket": "Ticket created",
+    "package": "Package Received",
+    "transit": "In transit",
+    "customer": "Waiting for customer",
+    "pickup": "Available for pickup",
+    "shipped": "Not yet shipped",
+    "delivery": "Out for delivery",
+    "delivered": "Returned",
+    "provider": "Provider",
+    "success": "Delivered"
+  },
+  "description": {
+    "sender": "Order is returned back to the shipper",
+    "delivery": "Order is out for delivery",
+    "cancelled": "Order has been cancelled",
+    "delivered": "Order  has been delivered successfully"
+  },
+  "lastUpdate": "Last update since {{count}} day ago."
+}

@@ -1,0 +1,58 @@
+@mixin container() {
+  padding: 0 $container_xl;
+
+  @include query-desktop-first($lg) {
+    padding: 0 $container_lg;
+  }
+  @include query-desktop-first($md) {
+    padding: 0 $container_md;
+  }
+  @include query-desktop-first($sm) {
+    padding: 0 $container_sm;
+  }
+  @include query-desktop-first($xs) {
+    padding: 0 $container;
+  }
+}
+
+@mixin query-desktop-first($max-size) {
+  @media all and (max-width: ($max-size + 1px)) {
+    @content;
+  }
+}
+
+@mixin query-mobile-first($min-size) {
+  @media all and (min-width: ($min-size + 1px)) {
+    @content;
+  }
+}
+
+@mixin query-desktop-height-first($max-size) {
+  @media all and (max-height: ($max-size + 1px)) {
+    @content;
+  }
+}
+
+@mixin query-mobile-height-first($min-size) {
+  @media all and (min-height: ($min-size + 1px)) {
+    @content;
+  }
+}
+
+@mixin ltr() {
+  @at-root #{$ltr} & {
+    @content;
+  }
+  @at-root &#{$ltr} {
+    @content;
+  }
+}
+
+@mixin rtl() {
+  @at-root #{$rtl} & {
+    @content;
+  }
+  @at-root &#{$rtl} {
+    @content;
+  }
+}
